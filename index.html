@@ -7,6 +7,7 @@
     <title>NOEMI adaptiv</title>
     
     <link href="fonts/OpenSans-Bold.ttf,fonts/OpenSans-Bold.woff,fonts/OpenSans-Bold.woff2,fonts/OpenSans-Regular.ttf,fonts/OpenSans-Regular.woff,fonts/OpenSans-Regular.woff2" rel="stylesheet"> 
+    <!-- <link rel="stylesheet" href="css/normalize.css"> -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
@@ -24,6 +25,7 @@
                     <li class="header-menu-item"><a class="header-menu-link" href="#0">контакты</a></li>
                 </ul>
             </nav>
+            <div class="header-menu-mobile"></div>
         </div>
 
         <div class="header-title">
@@ -313,9 +315,13 @@
         <h2 class="shop-title">наши изделия</h2>
         <div class="shop-items">
             <div class="shop-item">
-                <div class="shop-item-img"><img src="images/shop-item-desk1.jpg" alt="набор подушек"></div>
+                <picture class="shop-item-imgbox">
+                    <source media="(max-width: 640px)" srcset="images/shop-item-mobile1.jpg" alt="набор подушек">
+                    <source media="(min-width: 641px) and (max-width: 1199px)" srcset="images/shop-item-tablet1.jpg" alt="набор подушек">
+                    <img class="shop-item-img" src="images/shop-item-desk1.jpg" alt="набор подушек">
+                </picture>
                 <div class="shop-item-wrapper">
-                    <div class="shop-item-title"><h2>подушки на диван</h2></div>
+                    <div><h2 class="shop-item-title">подушки на диван</h2></div>
                     <div class="shop-item-text">
                         <p>Набор из двух подушек с модными принтами. Видео о создании <a class="shop-text-link" href="#">здесь</a>.</p>
                     </div>
@@ -329,9 +335,13 @@
                 </div>   
             </div>
             <div class="shop-item">
-                <div class="shop-item-img"><img src="images/shop-item-desk2.jpg" alt="кукла зайчик"></div>
+                <picture class="shop-item-imgbox">
+                    <source media="(max-width: 640px)" srcset="images/shop-item-mobile2.jpg" alt="кукла зайчик">
+                    <source media="(min-width: 641px) and (max-width: 1199px)" srcset="images/shop-item-tablet2.jpg" alt="кукла зайчик">
+                    <img class="shop-item-img" src="images/shop-item-desk2.jpg" alt="кукла зайчик">
+                </picture>
                 <div class="shop-item-wrapper">
-                    <div class="shop-item-title"><h2>кукла &laquo;зайчик&raquo;</h2></div>
+                    <div><h2 class="shop-item-title">кукла &laquo;зайчик&raquo;</h2></div>
                     <div class="shop-item-text">
                         <p>Интерьерная рукодельная кукла &laquo;Зайчик&raquo;, созданию которой посвящена <a class="shop-text-link" href="#">весенняя серия постов</a> в блоге и несколько подкастов.</p>
                     </div>
@@ -345,9 +355,13 @@
                 </div>
             </div>
             <div class="shop-item">
-                <div class="shop-item-img"><img src="images/shop-item-desk3.jpg" alt="рамка-шестиугольник"></div>
+                <picture class="shop-item-imgbox">
+                    <source media="(max-width: 640px)" srcset="images/shop-item-mobile3.jpg" alt="рамка-шестиугольник">
+                    <source media="(min-width: 641px) and (max-width: 1199px)" srcset="images/shop-item-tablet3.jpg" alt="рамка-шестиугольник">
+                    <img class="shop-item-img" src="images/shop-item-desk3.jpg" alt="рамка-шестиугольник">
+                </picture>
                 <div class="shop-item-wrapper">
-                    <div class="shop-item-title"><h2>шестиугольная рамка</h2></div>
+                    <div><h2 class="shop-item-title">шестиугольная рамка</h2></div>
                     <div class="shop-item-text">
                         <p>Необычная рамка для украшения дома из видео <a class="shop-text-link" href="#">&laquo;Как сделать рамку из подручных средств за 30 минут&raquo;</a></p>
                     </div>
@@ -375,10 +389,42 @@
         </div>
         <a href="#0"><span class="footer-copyright">Copyright &copy; 2009-2019 City Blog LLC</span></a>
     </footer>
+
     <div class="popup hidden">
         <div class="popup-wrp">
-            <div class="popup-title"></div>
-            <div class="popup-form"></div>
+            <div class="popup-title">
+                <h2 class="popup-title-text">ваш фидбек</h2>
+            </div>
+            <div class="popup-form">
+                <label for="" class="form-item">
+                    <span class="form-item-desc">Как часто вы заходите на сайт?</span>
+                    <select name="" id="" class="form-select" placeholder="Почти каждый день">
+                        <option value="Почти каждый день" class="select-option">Почти каждый день</option>
+                        <option value="Раз в несколько дней" class="select-option">Раз в несколько дней</option>
+                        <option value="Раз в несколько недель" class="select-option">Раз в несколько недель</option>
+                        <option value="Несколько раз в год" class="select-option">Несколько раз в год</option>
+                    </select>
+                </label>
+                <label for="" class="form-item">
+                    <span class="form-item-desc">Вы подписаны на e-mail рассылку?</span>
+                    <div class="radio-group">
+                        <label for="" class="radio-item">
+                            <input type="radio" class="form-radio" name="answ" checked>
+                            <span class="form-item-answ">Да</span>
+                        </label>
+                        <label for="" class="radio-item">
+                            <input type="radio" class="form-radio" name="answ">
+                            <span class="form-item-answ">Нет</span>
+                        </label>
+                    </div>
+                </label>
+                <label for="" class="form-item">
+                    <span class="form-item-desc">Расскажите, какой контент вы хотели бы видеть на нашем сайте?</span>
+                    <textarea name="" id="" cols="30" rows="6" class="item-content" placeholder="Может, больше рецептов?"></textarea>
+                </label>
+                <button class="popup-btn" type="submit">отправить</button>
+
+            </div>
         </div>
 
     </div>
